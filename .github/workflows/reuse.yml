@@ -1,0 +1,16 @@
+name: Java CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Standard Java Build and Test
+      uses: test-consistency/main_actions@v1
+      with:
+        java-version: '18'
+        build-command: 'mvn clean test jacoco:report'
+        distribution: 'adopt'
