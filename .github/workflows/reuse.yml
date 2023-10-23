@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Standard Java Build and Test
-      uses: test-consistency/main_actions@v1
+      uses: test-consistency/main-actions@main
       with:
         java-version: '18'
         build-command: 'mvn clean test jacoco:report'
